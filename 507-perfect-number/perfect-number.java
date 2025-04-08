@@ -2,7 +2,7 @@ class Solution {
     public boolean checkPerfectNumber(int num) {
 
         int sum=0;
-        for(int i=1;i<=(num/2);i++){
+        for(int i=1;i<num;i++){
            if(num % i==0 || i==1){
             sum=sum+i;
             }
