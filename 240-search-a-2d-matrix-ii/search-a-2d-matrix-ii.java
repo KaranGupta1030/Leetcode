@@ -11,7 +11,7 @@ class Solution {
             if(matrix[r][c]==target){
                 return true;
             }
-            if(target<matrix[r][c]){
+            else if(target<matrix[r][c]){
                 c--;
             }
             else{
