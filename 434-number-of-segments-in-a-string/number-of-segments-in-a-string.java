@@ -1,14 +1,15 @@
 class Solution {
     public int countSegments(String s) {
-        s=s.trim();
-        int count=0;
-        if(s.equals("")){
-            return 0;
-        }
-       String[] words = s.split("\\s+");
+         String[] words = s.split(" ");
+        int count = 0;
 
-     
-             return words.length;
-        
+        // Count non-empty words
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
