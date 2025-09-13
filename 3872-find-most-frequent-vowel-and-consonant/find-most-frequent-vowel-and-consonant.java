@@ -4,16 +4,9 @@ class Solution {
         Map<Character,Integer> mp=new HashMap<>();
         int maxv=0;
         int maxc=0;
-
-
         for( char ch: s.toCharArray()){
-            if(isVowels(ch)){
-                mp.put(ch,mp.getOrDefault(ch,0)+1);
-                
-
-            }else{
-            mp.put(ch,mp.getOrDefault(ch,0)+1);
-            }
+            
+                mp.put(ch,mp.getOrDefault(ch,0)+1);    
 
         }
         for (Map.Entry<Character, Integer> entry : mp.entrySet()) {
