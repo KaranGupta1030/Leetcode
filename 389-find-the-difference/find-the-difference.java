@@ -1,20 +1,15 @@
 class Solution {
     
     public char findTheDifference(String s, String t) {
-        Map<Character, Integer> mp = new HashMap<>();
+        int xor = 0;
         
-        for (char ch : s.toCharArray()) {
-            mp.put(ch, mp.getOrDefault(ch, 0) + 1);
-        }
+        for (char ch : t.toCharArray())
+            xor ^= ch;
         
-        for (char ch : t.toCharArray()) {
-            mp.put(ch, mp.getOrDefault(ch, 0) - 1);
-            
-            if (mp.get(ch) < 0)
-                return ch;
-        }
+        for (char ch : s.toCharArray())
+            xor ^= ch;
         
-        return 'a'; // send any random character; it will never reach here
+        return (char) xor;
     }
 
 }
